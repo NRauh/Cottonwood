@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cottonwood Demonstration</title>
+
+  <style>
+    #output {
+      text-align: center;
+      font-family: futura, helvetica, sans-serif;
+      font-size: 3em;
+    }
+
+    #input {
+      width: 70%;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      list-style: none;
+      text-align: center;
+    }
+
+    #input li {
+      width: 47%;
+      height: 5em;
+      margin-bottom: 1em;
+      background-color: darkgrey;
+      border-radius: 0.375em;
+    }
+
+    #input li:hover {
+      background-color: lightgrey;
+    }
+
+    #input li:active {
+      background-color: grey;
+    }
+
+    #input li a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      line-height: 3.5625em;
+      font-family: futura, helvetica, sans-serif;
+      font-size: 1.4375em;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1 id="output"></h1>
+  </div>
+
+  <div>
+    <ul id="input"></ul>
+  </div>
+
+  <p id="test"></p>
+  
+  <script src="../src/Cottonwood.js"></script>
+  <script>
+  var cw = new Cottonwood("test.json", "#output", "#input");
+  cw.loadDialog(() => {
+    cw.setPoint("0");
+  });
+  </script>
+</body>
+</html>

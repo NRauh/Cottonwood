@@ -32,12 +32,12 @@
     "endPoint": "2.1"
   },
   {
-    "response": "I'ld like to go deeper but I don't know",
+    "response": "I'd like to go deeper but I don't know",
     "endPoint": "2.2"
   },
   {
     "response": "What if I chose option 1?",
-    "endPoint": "1.1"
+    "endPoint": "1"
   }]
 },
 {
