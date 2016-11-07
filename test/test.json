@@ -1,0 +1,71 @@
+[{
+  "point": "0",
+  "statement": "You can choose three options",
+  "run": "document.querySelector('#test').innerText = 'Entry script ran'",
+  "options": [{
+    "response": "This is option 1",
+    "endPoint": "1"
+  },
+  {
+    "response": "This is option 2",
+    "endPoint": "2",
+    "run": "console.log('hello world')"
+  },
+  {
+    "response": "This is option 3",
+    "endPoint": "3"
+  }]
+},
+{
+  "point": "1",
+  "statement": "Option 1 has been chosen",
+  "options": [{
+    "response": "No go back",
+    "endPoint": "0"
+  }]
+},
+{
+  "point": "2",
+  "statement": "Option 2 has been chosen",
+  "options": [{
+    "response": "I must go deeper!",
+    "endPoint": "2.1"
+  },
+  {
+    "response": "I'ld like to go deeper but I don't know",
+    "endPoint": "2.2"
+  },
+  {
+    "response": "What if I chose option 1?",
+    "endPoint": "1.1"
+  }]
+},
+{
+  "point": "2.1",
+  "statement": "You're a mad one!",
+  "options": [{
+    "response": "I am aware",
+    "endPoint": "0"
+  }]
+},
+{
+  "point": "2.2",
+  "statement": "Very pragmatic",
+  "options": [{
+    "response": "Thank you",
+    "endPoint": "2.2.1"
+  },
+  {
+    "response": "Leave me alone",
+    "endPoint": "3"
+  }]
+},
+{
+  "point": "2.2.1",
+  "statement": "You're welcome"
+},
+{
+  "point": "3",
+  "statement": "I am a dead end :(",
+  "run": "console.log(42)"
+}]
